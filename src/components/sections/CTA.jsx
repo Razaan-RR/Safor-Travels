@@ -21,9 +21,11 @@ function CTA() {
     setStatus('Sending...')
 
     try {
-      const res = await fetch('https://safor-red.vercel.app', {
+      const res = await fetch('https://safor-red.vercel.app/api/book', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(formData),
       })
 
@@ -72,7 +74,8 @@ function CTA() {
           transition={{ duration: 1 }}
           className="text-4xl md:text-5xl font-extrabold mb-6"
         >
-          Ready for Your Next <span className="text-yellow-400">Adventure?</span>
+          Ready for Your Next{' '}
+          <span className="text-yellow-400">Adventure?</span>
         </motion.h2>
 
         <motion.p
@@ -205,7 +208,9 @@ function CTA() {
                 </button>
 
                 {status && (
-                  <p className="text-center text-sm text-yellow-300">{status}</p>
+                  <p className="text-center text-sm text-yellow-300">
+                    {status}
+                  </p>
                 )}
 
                 <button
