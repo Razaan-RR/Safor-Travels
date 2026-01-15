@@ -43,7 +43,7 @@ Backend:
 ## Project Setup
 
 - Clone the repository
-git clone <your-github-repo-url>
+git clone <github-repo-url>
 
 - Go into the project folder
 cd safor-travels
