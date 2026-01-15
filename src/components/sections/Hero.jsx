@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 function Hero() {
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* REAL BACKGROUND IMAGE (WORKING PUBLIC IMAGE) */}
       <motion.img
         src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop"
         alt="Travel background"
@@ -14,10 +13,8 @@ function Hero() {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/50"></div>
 
-      {/* CONTENT */}
       <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-20 text-white">
         <motion.h1
           initial={{ y: 60, opacity: 0 }}
@@ -54,7 +51,6 @@ function Hero() {
         </motion.div>
       </div>
 
-      {/* FLOATING PLANE (PUBLIC DOMAIN PNG) */}
       <motion.img
         src="https://png.pngtree.com/png-vector/20250320/ourmid/pngtree-realistic-passenger-airplane-in-mid-flight-isolated-on-transparent-background-png-image_15788014.png"
         alt="Plane"
@@ -64,7 +60,6 @@ function Hero() {
         className="absolute top-24 left-10 w-20 hidden md:block z-20 filter invert"
       />
 
-      {/* BOTTOM GRADIENT */}
       <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-black to-transparent"></div>
     </section>
   )

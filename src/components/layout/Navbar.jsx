@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenu, HiX } from 'react-icons/hi'
+import logo from '../../assets/Safor Travel Logo.png'
 
 const links = [
   { name: 'Home', href: '#hero' },
@@ -16,12 +17,14 @@ function Navbar() {
   return (
     <nav className="fixed w-full z-50 bg-black/30 backdrop-blur-md shadow-md">
       <div className="max-w-7xl mx-auto px-6 md:px-16 flex justify-between items-center h-20">
-        {/* Brand */}
-        <a href="#hero" className="text-yellow-400 text-2xl font-bold">
-          Safor Travels
+        <a href="#hero" className="flex items-center gap-2">
+          <img
+            src={logo}
+            alt="Safor Travels Logo"
+            className="h-10 w-auto object-contain"
+          />
         </a>
 
-        {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link, index) => (
             <motion.a
@@ -36,7 +39,6 @@ function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Hamburger */}
         <div className="md:hidden flex items-center">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
@@ -48,7 +50,6 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

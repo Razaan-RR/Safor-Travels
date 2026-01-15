@@ -32,7 +32,6 @@ function Journey() {
 
   return (
     <section className="relative py-32 bg-[#1f3152] text-white overflow-hidden">
-      {/* Moving light beams */}
       <motion.div
         animate={{ x: ['-20%', '120%'] }}
         transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
@@ -45,7 +44,6 @@ function Journey() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16">
-        {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,9 +60,7 @@ function Journey() {
           </h1>
         </motion.div>
 
-        {/* Timeline */}
         <div className="relative">
-          {/* Vertical glowing line */}
           <div className="absolute left-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-yellow-400/30 via-white/10 to-blue-400/30"></div>
 
           <div className="space-y-24">
@@ -79,7 +75,6 @@ function Journey() {
                   index % 2 === 0 ? 'justify-start' : 'justify-end'
                 }`}
               >
-                {/* Step Card */}
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   className="w-full md:w-[45%] bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl"
@@ -93,7 +88,6 @@ function Journey() {
                   <p className="text-gray-300 leading-relaxed">{step.desc}</p>
                 </motion.div>
 
-                {/* Glowing Dot */}
                 <div className="absolute left-1/2 -translate-x-1/2 top-10">
                   <div className="w-5 h-5 bg-yellow-400 rounded-full shadow-[0_0_20px_rgba(250,204,21,0.8)]"></div>
                 </div>
@@ -103,7 +97,6 @@ function Journey() {
         </div>
       </div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent"></div>
     </section>
   )

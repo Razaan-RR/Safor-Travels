@@ -32,7 +32,6 @@ function Destinations() {
   return (
     <section className="relative py-32 bg-[#1f3152] text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-16">
-        {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +47,6 @@ function Destinations() {
           </h1>
         </motion.div>
 
-        {/* Destinations Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {destinations.map((dest, i) => (
             <motion.div
@@ -59,28 +57,24 @@ function Destinations() {
               transition={{ duration: 1, delay: i * 0.2 }}
               className="relative group rounded-3xl overflow-hidden cursor-pointer"
             >
-              {/* Image */}
               <img
                 src={dest.img}
                 alt={dest.name}
                 className="w-full h-72 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
               />
 
-              {/* Overlay */}
               <div className="absolute inset-0 bg-black/30 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                 <p className="text-xl md:text-2xl font-semibold text-yellow-400">
                   {dest.name}
                 </p>
               </div>
 
-              {/* Glowing border */}
               <div className="absolute inset-0 rounded-3xl border border-white/10 group-hover:border-yellow-400/50 transition-colors duration-500 pointer-events-none"></div>
             </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent"></div>
     </section>
   )

@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 function About() {
   return (
     <section className="relative py-32 bg-[#1f3152] overflow-hidden text-white">
-      {/* Ambient glowing orbs */}
       <motion.div
         animate={{ x: [0, 40, 0], y: [0, -40, 0] }}
         transition={{ duration: 12, repeat: Infinity, ease: 'linear' }}
@@ -17,7 +16,6 @@ function About() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16">
-        {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +32,6 @@ function About() {
           </h1>
         </motion.div>
 
-        {/* Main Content Glass Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -42,11 +39,9 @@ function About() {
           viewport={{ once: true }}
           className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-10 md:p-16 shadow-2xl"
         >
-          {/* Floating gradient border effect */}
           <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-r from-yellow-400/20 via-transparent to-blue-400/20 opacity-30 blur-xl"></div>
 
           <div className="relative z-10 grid md:grid-cols-2 gap-14">
-            {/* About Paragraphs */}
             <motion.div
               initial={{ x: -60, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -71,7 +66,6 @@ function About() {
               </p>
             </motion.div>
 
-            {/* Mission & Vision */}
             <motion.div
               initial={{ x: 60, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -111,7 +105,6 @@ function About() {
         </motion.div>
       </div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black to-transparent"></div>
     </section>
   )

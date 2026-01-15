@@ -5,7 +5,6 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 function Footer() {
   return (
     <footer className="relative bg-[#17253f] text-white py-20 overflow-hidden">
-      {/* Decorative animated glow */}
       <motion.div
         animate={{ x: [0, 50, 0], y: [0, -50, 0] }}
         transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
@@ -18,7 +17,6 @@ function Footer() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16">
-        {/* Brand / Logo */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,9 +30,7 @@ function Footer() {
           <p className="text-gray-300 mt-2">Your Trusted Travel Partner</p>
         </motion.div>
 
-        {/* Footer links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +44,6 @@ function Footer() {
             <p className="text-gray-300">Dhaka, Bangladesh</p>
           </motion.div>
 
-          {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +68,6 @@ function Footer() {
             </ul>
           </motion.div>
 
-          {/* Social */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -119,7 +113,6 @@ function Footer() {
           </motion.div>
         </div>
 
-        {/* Bottom copyright */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
