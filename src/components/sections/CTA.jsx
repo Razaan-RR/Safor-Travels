@@ -21,7 +21,7 @@ function CTA() {
     setStatus('Sending...')
 
     try {
-      const res = await fetch('https://safor-red.vercel.app/api/book', {
+      const res = await fetch('https://safor-three.vercel.app/api/book', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
